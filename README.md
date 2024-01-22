@@ -1,0 +1,2 @@
+# themepark_flask
+テーマパーク問題のシミュレーションをFlaskベースのWebシステムで可視化する
