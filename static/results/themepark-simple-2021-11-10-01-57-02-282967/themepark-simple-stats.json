@@ -1,0 +1,35 @@
+{
+    "average": {
+        "time": 329.3,
+        "sum_of_visiting_time": 1426.7,
+        "sum_of_moving_time": 0.0,
+        "sum_of_waiting_time": 1126.7,
+        "sum_of_service_time": 300.0,
+        "average_of_visiting_time": 14.267000000000001,
+        "average_of_moving_time": 0.0,
+        "average_of_waiting_time": 11.267,
+        "average_of_service_time": 3.0
+    },
+    "variance": {
+        "time": 150.41,
+        "sum_of_visiting_time": 207703.81,
+        "sum_of_moving_time": 0.0,
+        "sum_of_waiting_time": 207703.81,
+        "sum_of_service_time": 0.0,
+        "average_of_visiting_time": 20.770381,
+        "average_of_moving_time": 0.0,
+        "average_of_waiting_time": 20.770380999999997,
+        "average_of_service_time": 0.0
+    },
+    "stddev": {
+        "time": 12.264175471673585,
+        "sum_of_visiting_time": 455.74533458939544,
+        "sum_of_moving_time": 0.0,
+        "sum_of_waiting_time": 455.74533458939544,
+        "sum_of_service_time": 0.0,
+        "average_of_visiting_time": 4.557453345893954,
+        "average_of_moving_time": 0.0,
+        "average_of_waiting_time": 4.557453345893954,
+        "average_of_service_time": 0.0
+    }
+}

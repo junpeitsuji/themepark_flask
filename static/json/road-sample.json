@@ -1,0 +1,113 @@
+{
+	"animation_steps": 200,
+	"visitors": {
+		"max_of_visitors": 50,
+		"num_of_initial_visitors": 0,
+		"plan_type": "random",
+		"image_path": "static/images/car.png",
+		"arrival": "poisson",
+		"arrival_rate": 0.3,
+		"width": 24,
+		"height": 16
+	},
+	"themepark": {
+		"entrance_id": 0,
+		"exit_id": 1,
+		"width": 49,
+		"height": 56,
+		"attractions": [
+			{
+				"id": 0,
+				"name": "Entrance",
+				"x": 85,
+				"y": 25,
+				"dom_id": "entrance",
+				"image_path": "static/images/entrance.png",
+				"type": "type-entrance",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 1,
+				"name": "Exit",
+				"x": 540,
+				"y": 370,
+				"dom_id": "exit",
+				"image_path": "static/images/entrance.png",
+				"type": "type-exit",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 2,
+				"name": "Attraction 0",
+				"x": 195,
+				"y": 110,
+				"dom_id": "attr-0",
+				"image_path": "static/images/ryokinjo.png",
+				"type": "type-attraction",
+				"capacity": 1,
+				"service_time": 4
+			},
+			{
+				"id": 3,
+				"name": "Attraction 1",
+				"x": 305,
+				"y": 195,
+				"dom_id": "attr-1",
+				"image_path": "static/images/ryokinjo.png",
+				"type": "type-attraction",
+				"capacity": 1,
+				"service_time": 5
+			},
+			{
+				"id": 4,
+				"name": "Attraction 2",
+				"x": 415,
+				"y": 280,
+				"dom_id": "attr-2",
+				"image_path": "static/images/ryokinjo.png",
+				"type": "type-attraction",
+				"capacity": 1,
+				"service_time": 6
+			}
+		],
+		"links": [
+			[
+				0,
+				0,
+				1,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				0,
+				0,
+				1
+			],
+			[
+				1,
+				0,
+				0,
+				1,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				1
+			],
+			[
+				0,
+				1,
+				0,
+				1,
+				0
+			]
+		]
+	}
+}

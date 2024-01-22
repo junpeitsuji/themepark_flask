@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Theme park simulation</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <div id="content">
+            <h1>Theme park simulation (replay mode)</h1>
+
+            <!-- UIのフィールド -->
+            <button id="next" disabled>next</button>
+            <button id="auto" disabled>auto</button>
+            <button id="load">load json</button>
+            <select id="json-name"></select>
+
+            <!-- テーマパークシミュレーションのフィールド -->
+            <div id="themepark" class="main"></div>
+
+            <!-- 結果のグラフのフィールド -->
+            <div id="footer">
+                <!--
+                <p style="font-weight: bold; font-size: 80%;">Queue length: </p>
+                <canvas id="chart" width="640px" height="90px"></canvas>
+                -->
+                <canvas id="real-time-chart" width="640px" height="220px"></canvas>
+                <canvas id="myChart" width="640px" height="320px"></canvas>
+            </div>
+
+            <p><a href="/admin">admin</a></p>
+
+        </div>
+        
+        <script type="text/javascript" src="/static/js/baselibs/array_chart.js"></script>
+
+        <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>-->
+        <script src="/static/js/Chart.js/2.2.1/Chart.js"></script>
+
+
+        <script type="text/javascript" src="/static/js/baselibs/dijkstra.js"></script>
+        <script type="text/javascript" src="/static/js/themepark.js"></script>
+
+<script type="text/javascript">
+window.onload = function(){
+// JSONリストの取得
+fetch('/replay/list.json') // (1) 読み込み
+.then(response => response.json()) // (2) レスポンスデータの受け取り
+.then(data => { // (3) データの処理
+    console.log(data);
+    const select = document.getElementById('json-name');
+    
+    for(let filename of data){
+        select.insertAdjacentHTML('beforeend', '<option value="'+filename+'">'+filename+'</option>' );
+    }
+});
+
+// ロードボタンの処理
+document.getElementById('load').addEventListener('click', (e) => {
+
+    const select = document.getElementById('json-name');
+    const index = select.selectedIndex;
+    const json_path = select.options[index].value;
+
+
+    fetch('static/results/'+json_path) // (1) 読み込み
+    .then(response => response.json()) // (2) レスポンスデータの受け取り
+    .then(data => { // (3) データの処理
+        console.log(data);
+        //alert('hello');
+
+        document.getElementById('themepark').innerHTML = '';
+
+        document.getElementById('next').removeAttribute("disabled");
+        document.getElementById('auto').removeAttribute("disabled");
+
+        document.getElementById('load').setAttribute("disabled", true);
+
+        themepark(data, true);
+    });
+
+});
+
+}
+</script>
+    </body>
+</html>

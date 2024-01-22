@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body style="background-color: #e4d6a7">
+        <div id="content">
+            <h1>Admin</h1>
+
+            <p>
+                <label for="type-select">Type:</label>
+                <select id="type-select">
+                    <option id="type-entrance" value="type-entrance">type-entrance</option>
+                    <option id="type-exit" value="type-exit">type-exit</option>
+                    <option id="type-plaza" value="type-plaza">type-plaza</option>
+                    <option id="type-road" value="type-road">type-road</option>
+                    <option id="type-attraction" value="type-attraction">type-attraction</option>
+                </select>
+            </p>
+            <p>
+                <label for="mode-select">Mode:</label>
+                <select id="mode-select">
+                    <option value="mode-attractions">mode-attractions</option>
+                    <option value="mode-links">mode-links</option>
+
+                </select>
+            </p>
+            <p>
+                <label for="width">width:</label>
+                <input id="width" value="100">
+            </p>
+            <p>
+                <label for="height">height:</label>
+                <input id="height" value="80">
+            </p>
+            <p><button id="generate">generate</button></p>
+            <!-- テーマパークシミュレーションのフィールド -->
+            <div id="themepark" class="main"></div>
+
+
+            <form action="/" method="POST">
+                <textarea id="result" name="result">
+
+                </textarea>
+                <input type="submit" value="submit">
+            </form>
+
+            <p><a href="/">top</a></p>
+
+        </div>
+        
+        <script type="text/javascript" src="/static/js/themepark_setting.js"></script>
+
+    </body>
+</html>

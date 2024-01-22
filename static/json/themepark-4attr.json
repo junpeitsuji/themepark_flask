@@ -1,0 +1,255 @@
+{
+	"animation_steps": 200,
+	"visitors": {
+		"max_of_visitors": 50,
+		"num_of_initial_visitors": 0,
+		"plan_type": "random",
+		"image_path": "static/images/visitor.png",
+		"arrival": "poisson",
+		"arrival_rate": 0.3,
+		"width": 14,
+		"height": 21
+	},
+	"themepark": {
+		"entrance_id": 0,
+		"exit_id": 1,
+
+        "width": 80,
+        "height": 64,
+
+		"attractions": [
+			{
+				"id": 0,
+				"name": "Entrance",
+				"x": 80,
+				"y": 180,
+				"dom_id": "entrance",
+				"image_path": "static/images/entrance.png",
+				"type": "type-entrance",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 1,
+				"name": "Exit",
+				"x": 80,
+				"y": 330,
+				"dom_id": "exit",
+				"image_path": "static/images/entrance.png",
+				"type": "type-exit",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 2,
+				"name": "Plaza 0",
+				"x": 230,
+				"y": 180,
+				"dom_id": "plaza-0",
+				"image_path": "static/images/plaza.png",
+				"type": "type-plaza",
+				"capacity": -1,
+				"service_time": 5
+			},
+			{
+				"id": 3,
+				"name": "Plaza 1",
+				"x": 370,
+				"y": 180,
+				"dom_id": "plaza-1",
+				"image_path": "static/images/plaza.png",
+				"type": "type-plaza",
+				"capacity": -1,
+				"service_time": 5
+			},
+			{
+				"id": 4,
+				"name": "Plaza 2",
+				"x": 230,
+				"y": 330,
+				"dom_id": "plaza-2",
+				"image_path": "static/images/plaza.png",
+				"type": "type-plaza",
+				"capacity": -1,
+				"service_time": 5
+			},
+			{
+				"id": 5,
+				"name": "Plaza 3",
+				"x": 370,
+				"y": 330,
+				"dom_id": "plaza-3",
+				"image_path": "static/images/plaza.png",
+				"type": "type-plaza",
+				"capacity": -1,
+				"service_time": 5
+			},
+			{
+				"id": 6,
+				"name": "Attraction 0",
+				"x": 230,
+				"y": 40,
+				"dom_id": "attr-0",
+				"image_path": "static/images/attraction0.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 5
+			},
+			{
+				"id": 7,
+				"name": "Attraction 1",
+				"x": 370,
+				"y": 40,
+				"dom_id": "attr-1",
+				"image_path": "static/images/attraction1.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 10
+			},
+			{
+				"id": 8,
+				"name": "Attraction 2",
+				"x": 520,
+				"y": 180,
+				"dom_id": "attr-2",
+				"image_path": "static/images/attraction2.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 5
+			},
+			{
+				"id": 9,
+				"name": "Attraction 3",
+				"x": 520,
+				"y": 330,
+				"dom_id": "attr-3",
+				"image_path": "static/images/attraction0.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 10
+			}
+		],
+		"links": [
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				1,
+				0,
+				0,
+				1,
+				1,
+				0,
+				1,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				1,
+				0,
+				1,
+				1,
+				0
+			],
+			[
+				0,
+				1,
+				1,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				0,
+				1,
+				1,
+				0,
+				0,
+				0,
+				0,
+				1
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				0,
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0
+			]
+		]
+	}
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Theme park simulation</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <div id="content">
+            <h1>Theme park simulation</h1>
+
+            <!-- UIのフィールド -->
+            <button id="next" style="display:none">next</button>
+            <button id="auto" style="display:none">auto</button>
+            <button id="load" style="display:none">load json</button>
+            <select id="json-name" style="display:none"></select>
+
+            <!-- テーマパークシミュレーションのフィールド -->
+            <div id="themepark" class="main"></div>
+
+            <!-- 結果のグラフのフィールド -->
+            <div id="footer">
+                <!--
+                <p style="font-weight: bold; font-size: 80%;">Queue length: </p>
+                <canvas id="chart" width="640px" height="90px"></canvas>
+                -->
+                <canvas id="real-time-chart" width="640px" height="220px"></canvas>
+                <canvas id="myChart" width="640px" height="320px"></canvas>
+            </div>
+
+            <p><a href="/admin">admin</a></p>
+
+        </div>
+        
+        <script type="text/javascript" src="/static/js/baselibs/array_chart.js"></script>
+
+        <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>-->
+        <script src="/static/js/Chart.js/2.2.1/Chart.js"></script>
+
+
+        <script type="text/javascript" src="/static/js/baselibs/dijkstra.js"></script>
+        <script type="text/javascript" src="/static/js/themepark.js"></script>
+
+<script type="text/javascript">
+window.onload = function(){
+
+    let json_list = ["road-sample.json", 
+            "themepark-2attr-sample.json",
+            "themepark-3attr-sample.json",
+            "themepark-4attr.json",
+            "themepark-kawamura04.json",
+            ];
+    
+    let r = Math.floor(Math.random() * json_list.length);
+    //console.log(json_list.length);
+    //console.log(r);
+
+    let json_path = json_list[r];
+
+    fetch('static/json/'+json_path) // (1) 読み込み
+    .then(response => response.json()) // (2) レスポンスデータの受け取り
+    .then(data => { // (3) データの処理
+        console.log(data);
+        //alert('hello');
+
+        document.getElementById('themepark').innerHTML = '';
+
+        themepark(data, false, true);
+
+        setTimeout(function(){
+            // オートモードで実行
+            auto_mode_global();
+            console.log("AUTO");
+
+        }, 2000);
+    });
+
+}
+</script>
+    </body>
+</html>

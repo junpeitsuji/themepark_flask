@@ -1,0 +1,203 @@
+{
+	"animation_steps": 200,
+	"visitors": {
+		"max_of_visitors": 10,
+		"num_of_initial_visitors": 10,
+		"plan_type": "manual",
+		"plan_manual": [
+			[3, 4, 5, 6, 7],
+			[3, 4, 5, 6, 7],
+			[3, 4, 5, 6, 7],
+			[3, 4, 5, 6, 7],
+			[3, 4, 5, 6, 7],
+			[4, 3, 5, 6, 7],
+			[4, 3, 5, 6, 7],
+			[4, 3, 5, 6, 7],
+			[4, 3, 5, 6, 7],
+			[4, 3, 5, 6, 7]
+		],
+		"image_path": "static/images/visitor.png",
+		"arrival": "poisson",
+		"arrival_rate": 0.3,
+		"width": 16,
+		"height": 24
+	},
+	"themepark": {
+		"entrance_id": 0,
+		"exit_id": 1,
+		"width": 80,
+		"height": 64,
+		"attractions": [
+			{
+				"id": 0,
+				"name": "Entrance",
+				"x": 28,
+				"y": 118,
+				"dom_id": "entrance",
+				"image_path": "static/images/entrance.png",
+				"type": "type-entrance",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 1,
+				"name": "Exit",
+				"x": 29,
+				"y": 268,
+				"dom_id": "exit",
+				"image_path": "static/images/entrance.png",
+				"type": "type-exit",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 2,
+				"name": "Plaza 0",
+				"x": 184,
+				"y": 202,
+				"dom_id": "plaza-0",
+				"image_path": "static/images/plaza.png",
+				"type": "type-plaza",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 3,
+				"name": "Attraction 0",
+				"x": 348,
+				"y": 22,
+				"dom_id": "attr-0",
+				"image_path": "static/images/attraction0.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 3
+			},
+			{
+				"id": 4,
+				"name": "Attraction 1",
+				"x": 479,
+				"y": 113,
+				"dom_id": "attr-1",
+				"image_path": "static/images/attraction1.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 3
+			},
+			{
+				"id": 5,
+				"name": "Attraction 2",
+				"x": 420,
+				"y": 224,
+				"dom_id": "attr-2",
+				"image_path": "static/images/attraction2.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 3
+			},
+			{
+				"id": 6,
+				"name": "Attraction 3",
+				"x": 508,
+				"y": 319,
+				"dom_id": "attr-3",
+				"image_path": "static/images/attraction0.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 3
+			},
+			{
+				"id": 7,
+				"name": "Attraction 4",
+				"x": 329,
+				"y": 379,
+				"dom_id": "attr-4",
+				"image_path": "static/images/attraction1.png",
+				"type": "type-attraction",
+				"capacity": 2,
+				"service_time": 3
+			}
+		],
+		"links": [
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				1,
+				1,
+				0,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0,
+				0,
+				0,
+				0
+			]
+		]
+	}
+}

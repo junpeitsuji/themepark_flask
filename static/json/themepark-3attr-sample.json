@@ -1,0 +1,100 @@
+{
+    "animation_steps": 100,
+
+    "visitors": {
+        "max_of_visitors": 30,
+        "num_of_initial_visitors": 0,
+        "plan_type": "ordered",
+        "image_path": "static/images/visitor.png",
+        "arrival": "poisson",
+		"arrival_rate": 0.3,
+		"width": 16,
+		"height": 24
+    },
+
+    "themepark": {
+
+        "entrance_id": 0,
+        "exit_id": 1,
+
+        "width": 100,
+        "height": 80,
+
+        "attractions": [
+            {
+                "id": 0,
+                "name": "Entrance",
+                "x": 120,
+                "y": 360,
+                "dom_id": "entrance",
+                "image_path": "static/images/entrance.png",
+                "type": "type-entrance",
+                "capacity": -1,
+                "service_time": 1
+            },
+            {
+                "id": 1,
+                "name": "Exit",
+                "x": 400,
+                "y": 340,
+                "dom_id": "exit",
+                "image_path": "static/images/entrance.png",
+                "type": "type-exit",
+                "capacity": -1,
+                "service_time": 1
+            },
+            {
+                "id": 2,
+                "name": "Plaza1",
+                "x": 250,
+                "y": 210,
+                "dom_id": "plaza1",
+                "image_path": "static/images/plaza.png",
+                "type": "type-plaza",
+                "capacity": -1,
+                "service_time": 1
+            },
+            {
+                "id": 3,
+                "name": "Attraction1",
+                "x": 100,
+                "y": 120,
+                "dom_id": "attr-0",
+                "image_path": "static/images/attraction0.png",
+                "type": "type-attraction",
+                "capacity": 2,
+                "service_time": 10
+            },
+            {
+                "id": 4,
+                "name": "Attraction2",
+                "x": 250,
+                "y": 40,
+                "dom_id": "attr-1",
+                "image_path": "static/images/attraction1.png",
+                "type": "type-attraction",
+                "capacity": 2,
+                "service_time": 5
+            },
+            {
+                "id": 5,
+                "name": "Attraction3",
+                "x": 400,
+                "y": 75,
+                "dom_id": "attr-2",
+                "image_path": "static/images/attraction2.png",
+                "type": "type-attraction",
+                "capacity": 2,
+                "service_time": 15
+            }
+        ], 
+        "links": [
+            [0, 0, 1, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0],
+            [1, 1, 1, 1, 1, 1],
+            [0, 0, 1, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0],
+            [0, 0, 1, 0, 0, 0]
+        ]
+    }
+}

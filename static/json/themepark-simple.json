@@ -1,0 +1,65 @@
+    {
+    "animation_steps": 200,
+
+    "visitors": {
+        "max_of_visitors": 100,
+        "num_of_initial_visitors": 0,
+        "plan_type": "random",
+        "image_path": "static/images/visitor.png",
+        "arrival": "poisson",
+		"arrival_rate": 0.3,
+		"width": 16,
+		"height": 24
+    },
+
+    "themepark": {
+
+        "entrance_id": 0,
+        "exit_id": 1,
+
+        "width": 100,
+        "height": 80,
+    
+        "attractions": [
+            {
+                "id": 0,
+                "name": "Entrance",
+                "x": 120,
+                "y": 300,
+                "dom_id": "entrance",
+                "image_path": "static/images/entrance.png",
+                "type": "type-entrance",
+                "capacity": -1,
+                "service_time": 1
+            },
+            {
+                "id": 1,
+                "name": "Exit",
+                "x": 400,
+                "y": 300,
+                "dom_id": "exit",
+                "image_path": "static/images/entrance.png",
+                "type": "type-exit",
+                "capacity": -1,
+                "service_time": 1
+            },
+            {
+                "id": 2,
+                "name": "Attraction1",
+                "x": 260,
+                "y": 90,
+                "dom_id": "attr-0",
+                "image_path": "static/images/attraction0.png",
+                "type": "type-attraction",
+                "capacity": 1,
+                "service_time": 3
+            }
+        ], 
+        "links": [
+            [0, 0, 1],
+            [0, 0, 1],
+            [1, 1, 1]
+        ]
+    }
+
+}

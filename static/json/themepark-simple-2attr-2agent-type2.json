@@ -1,0 +1,114 @@
+{
+	"animation_steps": 500,
+	"visitors": {
+		"max_of_visitors": 2,
+		"num_of_initial_visitors": 2,
+		"plan_type": "manual",
+		"plan_manual": [[3, 4], [4, 3]],
+		"image_path": "static/images/visitor.png",
+		"arrival": "poisson",
+		"arrival_rate": 0.3,
+		"width": 16,
+		"height": 24
+	},
+	"themepark": {
+		"entrance_id": 0,
+		"exit_id": 1,
+		"width": 100,
+		"height": 80,
+		"attractions": [
+			{
+				"id": 0,
+				"name": "Entrance",
+				"x": 100,
+				"y": 350,
+				"dom_id": "entrance",
+				"image_path": "static/images/entrance.png",
+				"type": "type-entrance",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 1,
+				"name": "Exit",
+				"x": 400,
+				"y": 350,
+				"dom_id": "exit",
+				"image_path": "static/images/entrance.png",
+				"type": "type-exit",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 2,
+				"name": "Plaza 0",
+				"x": 250,
+				"y": 200,
+				"dom_id": "plaza-0",
+				"image_path": "static/images/plaza.png",
+				"type": "type-plaza",
+				"capacity": -1,
+				"service_time": 1
+			},
+			{
+				"id": 3,
+				"name": "Attraction 0",
+				"x": 100,
+				"y": 50,
+				"dom_id": "attr-0",
+				"image_path": "static/images/attraction0.png",
+				"type": "type-attraction",
+				"capacity": 1,
+				"service_time": 5
+			},
+			{
+				"id": 4,
+				"name": "Attraction 1",
+				"x": 400,
+				"y": 50,
+				"dom_id": "attr-1",
+				"image_path": "static/images/attraction1.png",
+				"type": "type-attraction",
+				"capacity": 1,
+				"service_time": 5
+			}
+		],
+		"links": [
+			[
+				0,
+				0,
+				1,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0
+			],
+			[
+				1,
+				1,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0
+			],
+			[
+				0,
+				0,
+				1,
+				0,
+				0
+			]
+		]
+	}
+}

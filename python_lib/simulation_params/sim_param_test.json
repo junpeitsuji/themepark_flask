@@ -1,0 +1,6 @@
+{
+    "exp_name": "themepark-simple",
+    "json_filename": "static/json/themepark-simple.json",
+    "output_path": "python_lib/results/themepark-simple",
+    "num_of_exp": 10
+}
