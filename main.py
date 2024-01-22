@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 app = Flask(__name__)
 
 import datetime
@@ -19,6 +19,7 @@ def hello():
         filename = 'generate-'+time_str+'.json'
         with open('static/json/'+filename, 'w', encoding='UTF-8') as f:
             f.write(request.form['result'])
+        return redirect(url_for('hello'))
 
     return render_template('index.html')
 
